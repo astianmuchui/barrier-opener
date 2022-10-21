@@ -5,22 +5,22 @@
 Servo enter;
 void setup()
 {
-	pinMode(IR,INPUT);
-  	pinMode(pir,INPUT);
-	enter.attach(servo);
+  pinMode(IR,INPUT);
+  pinMode(pir,INPUT);
+  enter.attach(servo);
 }
 
 void loop()
 {
   if(motionDetected() && digitalRead(IR)== HIGH){
-  	enter.write(90);
+    enter.write(90);
   }
 }
 bool motionDetected(){
-  if(digitalRead(pir)== HIGH){
-  	return true;
-  }else{
-  	return false;
+if(digitalRead(pir)== HIGH){
+ return true;
+}else{
+  return false;
   }  	
 }
 

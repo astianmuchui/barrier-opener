@@ -9,7 +9,6 @@ void setup()
   pinMode(pir,INPUT);
   enter.attach(servo);
 }
-
 void loop()
 {
   if(motionDetected() && digitalRead(IR)== HIGH){
@@ -23,4 +22,3 @@ if(digitalRead(pir)== HIGH){
   return false;
   }  	
 }
-
